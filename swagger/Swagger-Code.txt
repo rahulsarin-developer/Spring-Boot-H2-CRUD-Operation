@@ -1,0 +1,28 @@
+In the main class of Spring Boot, write the following lines of code:
+
+@Bean
+public Docket api() {
+	return new Docket(DocumentationType.SWAGGER_2)
+	.select()
+	.apis(RequestHandlerSelectors.any())
+	.paths(PathSelectors.any())
+	.build();
+}
+
+===========================================================================
+
+Add "@EnableSwagger2" on the top of main class
+
+===========================================================================
+
+<dependency>
+<groupId>io.springfox</groupId>
+<artifactId>springfox-swagger-ui</artifactId>
+<version>2.9.2</version>
+</dependency>
+		
+<dependency>
+<groupId>io.springfox</groupId>
+<artifactId>springfox-swagger2</artifactId>
+<version>2.9.2</version>
+</dependency>

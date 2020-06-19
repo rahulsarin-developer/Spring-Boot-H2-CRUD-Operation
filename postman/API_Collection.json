@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "f7c53036-d8c5-4163-8d88-70a282f4ce85",
+		"name": "API_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/listAllCustomers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"listAllCustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Customers Page Wise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/listAllCustomersPageWise?page=1&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"listAllCustomersPageWise"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Customer by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1000033,\r\n    \"name\": \"Coralie Leaming\",\r\n    \"email\": \"cleaming2@sskype.com\",\r\n    \"phone\": \"8131153250\",\r\n    \"city\": \"Morshansk\",\r\n    \"state\": null,\r\n    \"country\": \"Russia\",\r\n    \"gender\": \"Female\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Customer based on ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Rahul Sarin\",\r\n    \"email\": \"rahul@skype.com\",\r\n    \"phone\": \"9090989878\",\r\n    \"city\": \"bangalore\",\r\n    \"state\": \"Karnataka\",\r\n    \"country\": \"India\",\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Customer based on ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Rahul Sarin\",\r\n    \"email\": \"rahul@skype.com\",\r\n    \"phone\": \"9090989878\",\r\n    \"city\": \"bangalore\",\r\n    \"state\": \"Karnataka\",\r\n    \"country\": \"India\",\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/customer/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
